@@ -4,7 +4,7 @@ const cors = require('cors')
 const jwt = require('jsonwebtoken')
 const cookieParser = require('cookie-parser')
 const app = express()
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 3000
 
 //default middlewares
 app.use(cookieParser())
@@ -19,7 +19,7 @@ app.use(
 
 // Custom midddlewares
 function verifyToken(req, res, next) {
-    const token = req.cookies.myToken;
+    const token = req.cookies?.myToken;
     // console.log(token)
     if (!token) {
         return res.status(401).send({ message: 'You are anauthorize' })
