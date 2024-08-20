@@ -11,7 +11,7 @@ app.use(cookieParser())
 app.use(express.json())
 app.use(
     cors({
-        origin: ['http://localhost:5173', 'https://repair-ranger.web.app'],
+        origin: ['http://localhost:5173', 'https://repair-ranger.web.app', "https://repairrangers.vercel.app"],
         credentials: true,
         methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     })
